@@ -1,248 +1,754 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yohanis Kefyalew — Full-Stack Developer and Computer Science student.">
-  <title>Yohanis Kefyalew | Full-Stack Developer</title>
-  <link rel="stylesheet" href="style.css">
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Yohanis Kefyalew | Full-Stack Engineer &amp; AI Builder</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Sora:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;family=Sora:wght@100..900&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="tailwind.config.js"></script>
+<link href="page.css" rel="stylesheet">
+
 </head>
-<body>
-  <header class="navbar">
-    <a class="logo" href="#home">YK<span>.</span></a>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-    <nav id="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#toolbox">Toolbox</a>
-      <a href="#projects">Projects</a>
-      <a href="#training">Training</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<body class="bg-surface-base text-text-primary font-body-md text-body-md antialiased selection:bg-primary-container selection:text-surface-base min-h-screen relative overflow-x-hidden">
+<!-- Subtle Radial Glow Underlay -->
+<div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+<div class="fixed top-[45%] right-[-100px] w-[600px] h-[500px] bg-secondary/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+<!-- Shared Component Anchor: TopNavBar (glassmorphism_nav) -->
+<header class="bg-surface-base/80 dark:bg-surface-base/80 backdrop-blur-md docked full-width top-0 sticky z-50 shadow-sm border-b border-border-hairline dark:border-border-hairline">
+<div class="flex justify-between items-center w-full max-w-7xl mx-auto px-4 md:px-8 py-3">
+<!-- Brand & Status Pill -->
+<div class="flex items-center gap-3">
+<a class="font-code-inline text-code-inline font-bold text-text-primary dark:text-text-primary tracking-tight flex items-center gap-2 group" href="#hero">
+<span class="w-8 h-8 rounded-lg bg-surface-elevated border border-border-hairline flex items-center justify-center text-primary group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-sm">terminal</span>
+</span>
+<span class="">yk.dev</span>
+</a>
+<div class="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded-full bg-status-success/10 border border-status-success/20">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success animate-pulse"></span>
+<span class="font-label-badge text-label-badge text-status-success tracking-wide">Available for internships</span>
+</div>
+</div>
+<!-- Navigation Links from Shared Components JSON + Page Anchors -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-text-secondary dark:text-text-secondary font-medium hover:text-primary dark:hover:text-primary transition-colors duration-150 font-body-sm text-body-sm" href="#about">About</a>
+<a class="text-text-secondary dark:text-text-secondary font-medium hover:text-primary dark:hover:text-primary transition-colors duration-150 font-body-sm text-body-sm" href="#stack">Stack</a>
+<a class="text-primary dark:text-primary font-medium font-body-sm text-body-sm" href="#projects">Projects</a>
+<a class="text-text-secondary dark:text-text-secondary font-medium hover:text-primary dark:hover:text-primary transition-colors duration-150 font-body-sm text-body-sm" href="#achievements">Achievements</a>
+<a class="text-text-secondary dark:text-text-secondary font-medium hover:text-primary dark:hover:text-primary transition-colors duration-150 font-body-sm text-body-sm" href="#contact">Contact</a>
+</nav>
+<!-- Trailing Actions & Socials -->
+<div class="flex items-center gap-2.5">
+<a class="p-2 rounded-lg bg-surface-elevated/70 border border-border-hairline text-text-secondary hover:text-text-primary hover:border-border-highlight transition-all" href="https://github.com/yohanisdev" rel="noopener noreferrer" target="_blank" title="GitHub">
+<span class="material-symbols-outlined text-lg">code</span>
+</a>
+<a class="p-2 rounded-lg bg-surface-elevated/70 border border-border-hairline text-text-secondary hover:text-text-primary hover:border-border-highlight transition-all" href="https://www.linkedin.com/in/yohanis-kefyalew-37269b397?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<span class="material-symbols-outlined text-lg">hub</span>
+</a>
+<a class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:shadow-lg hover:shadow-primary/30 transition-all duration-200 active:scale-95" href="#contact">
+<span class="">Let's Talk</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full relative">
+<!-- HERO SECTION WITH EMBEDDED 3D CONSTELLATION SCENE -->
+<section class="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden border-b border-border-hairline" id="hero">
+<!-- 3D Constellation Animation Scene Integration -->
+<!-- STITCH_THREEJS_START:ANIMATION_3 class="absolute inset-0 w-full h-[650px] pointer-events-none opacity-60" -->
+<div class="absolute inset-0 w-full h-[650px] pointer-events-none opacity-60" style="display:block;">
+<div id="threejs-container-ANIMATION_3" style="width:100%;height:100%"></div>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_3 -->
+<!-- Grid Pattern Overlay -->
+<div class="absolute inset-0 grid-pattern pointer-events-none opacity-40"></div>
+<div class="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Hero Text Column -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-surface-elevated/80 border border-border-highlight backdrop-blur-md w-fit">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">
+                COMPUTER SCIENCE @ JIMMA UNIVERSITY
+              </span>
+</div>
+<div class="space-y-3">
+<h1 class="font-headline-hero text-headline-hero-mobile md:text-headline-hero text-text-primary tracking-tight font-extrabold leading-[1.08]">
+                Hi, I'm <span class="bg-gradient-to-r from-primary via-primary-fixed to-secondary bg-clip-text text-transparent">Yohanis Kefyalew</span>.
+              </h1>
 
-  <main>
-    <!-- ===== HERO ===== -->
-    <section id="home" class="hero section">
-      <div class="hero-content">
-        <p class="eyebrow">COMPUTER SCIENCE STUDENT — FULL-STACK DEVELOPER</p>
-        <h1>Hi, I'm <span>Yohanis Kefyalew.</span></h1>
-        <h2>I build practical digital solutions.</h2>
-        <p class="hero-text">
-          I'm a 3rd-year Computer Science student at Jimma University passionate about
-          full-stack development, problem solving, AI, and building software that solves real-world problems.
+</div>
+<!-- CTA Actions Bar -->
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<a class="px-5 py-3 rounded-lg bg-primary-container text-surface-base font-semibold font-body-sm text-body-sm hover:shadow-[0_0_24px_rgba(6,182,212,0.45)] transition-all duration-200 active:scale-95 flex items-center gap-2" href="#projects">
+<span class="material-symbols-outlined text-lg">rocket_launch</span>
+<span class="">Explore Projects</span>
+</a>
+<a class="px-5 py-3 rounded-lg bg-surface-elevated/80 border border-border-hairline text-text-primary font-body-sm text-body-sm font-medium hover:border-primary/40 hover:text-primary transition-all duration-150 flex items-center gap-2" href="https://github.com/yohanisdev" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-lg">code</span>
+<span class="">GitHub Profile ↗</span>
+</a>
+<a class="px-4 py-3 rounded-lg bg-surface-container-low/60 border border-border-hairline text-text-muted hover:text-text-primary font-code-inline text-code-inline flex items-center gap-2 transition-colors" href="tel:+251925090990">
+<span class="material-symbols-outlined text-base text-status-success">call</span>
+<span class="">+251 925 090 990</span>
+</a>
+</div>
+<!-- Fast Metrics Ribbon -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-border-hairline">
+<div class="p-3 rounded-lg bg-surface-elevated/40 border border-border-hairline backdrop-blur-sm">
+<div class="font-headline-md text-headline-md text-primary font-bold">3rd Year</div>
+<div class="font-label-eyebrow text-label-eyebrow text-text-muted">CS AT JIMMA UNIV</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-elevated/40 border border-border-hairline backdrop-blur-sm">
+<div class="font-headline-md text-headline-md text-secondary font-bold">12</div>
+<div class="font-label-eyebrow text-label-eyebrow text-text-muted">PUBLIC REPOSITORIES</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-elevated/40 border border-border-hairline backdrop-blur-sm">
+<div class="font-headline-md text-headline-md text-tertiary font-bold">15</div>
+<div class="font-label-eyebrow text-label-eyebrow text-text-muted">GITHUB FOLLOWERS</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-elevated/40 border border-border-hairline backdrop-blur-sm">
+<div class="font-headline-md text-headline-md text-primary-fixed font-bold">3</div>
+<div class="font-label-eyebrow text-label-eyebrow text-text-muted">ETHIO CODERS COURSES</div>
+</div>
+</div>
+</div>
+<!-- Hero Visual: IDE Code Terminal Window (developer.js) -->
+<div class="lg:col-span-5"><div class="space-y-5">
+  <!-- Interactive Developer Profile Card -->
+  <div class="group relative rounded-xl bg-surface-elevated/80 border border-border-hairline p-3 sm:p-4 backdrop-blur-xl shadow-2xl transition-all duration-300 hover:border-border-highlight hover:shadow-[0_0_35px_rgba(6,182,212,0.35)]">
+    <div class="flex flex-col sm:flex-row items-center gap-4">
+      <!-- Avatar with Dynamic Glow and Scale Hover -->
+      <div class="relative w-28 h-28 sm:w-24 sm:h-24 rounded-xl overflow-hidden border border-border-highlight/60 flex-shrink-0 group-hover:border-primary transition-all duration-300 shadow-lg">
+        <img src="https://github.com/yohanisdev.png?size=512" alt="Yohanis Kefyalew GitHub profile photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface-base/70 via-transparent to-transparent pointer-events-none"></div>
+        <span class="absolute bottom-1.5 right-1.5 w-3 h-3 rounded-full bg-status-success border-2 border-surface-base shadow-sm animate-pulse" title="GitHub profile"></span>
+      </div>
+      <!-- Profile Meta & Status Badges -->
+      <div class="flex-1 text-center sm:text-left space-y-1.5">
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+          <span class="font-headline-sm text-headline-sm font-bold text-text-primary tracking-tight group-hover:text-primary transition-colors">Yohanis Kefyalew</span>
+          <span class="px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-badge text-label-badge">Computer Science</span>
+        </div>
+        <div class="pt-1 flex flex-wrap items-center justify-center sm:justify-start gap-2">
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-badge text-label-badge">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            <span class="">Full-stack web developer</span>
+          </div>
+          <span class="px-2 py-1 rounded bg-surface-overlay text-text-muted font-code-inline text-[10px] border border-border-hairline hidden sm:inline-block">Jimma University</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IDE Code Terminal Window (developer.js) -->
+  <div class="rounded-xl bg-surface-elevated/90 border border-border-hairline shadow-2xl backdrop-blur-xl overflow-hidden custom-glow-cyan transition-all hover:border-border-highlight">
+    <!-- Window Bar Header -->
+    <div class="flex items-center justify-between px-4 py-3 bg-surface-base/80 border-b border-border-hairline">
+      <div class="flex items-center gap-2">
+        <span class="w-3 h-3 rounded-full bg-status-error inline-block"></span>
+        <span class="w-3 h-3 rounded-full bg-status-warning inline-block"></span>
+        <span class="w-3 h-3 rounded-full bg-status-success inline-block"></span>
+        <span class="ml-2 font-code-inline text-code-inline text-text-muted text-xs">developer.js</span>
+      </div>
+      <div class="flex items-center gap-2 text-text-muted">
+        <span class="font-label-badge text-label-badge text-[10px] px-2 py-0.5 rounded bg-surface-overlay text-text-secondary">GitHub profile</span>
+        <span class="material-symbols-outlined text-sm">terminal</span>
+      </div>
+    </div>
+    <!-- Terminal Code Body -->
+    <div class="p-5 font-code-block text-code-block leading-relaxed overflow-x-auto text-sm space-y-1">
+      <div class=""><span class="text-tertiary">const</span> <span class="text-primary font-semibold">developer</span> = {</div>
+      <div class="pl-4"><span class="text-primary">name</span>: <span class="text-tertiary-fixed-dim">"Yohanis Kefyalew"</span>,</div>
+      <div class="pl-4"><span class="text-primary">university</span>: <span class="text-tertiary-fixed-dim">"Jimma University "</span>,</div>
+      <div class="pl-4"><span class="text-primary">role</span>: <span class="text-tertiary-fixed-dim">"Full-Stack developer &amp; Automation Engineer"</span>,</div>
+      <div class="pl-4"><span class="text-primary">coreFocus</span>: [</div>
+      <div class="pl-8"><span class="text-secondary">"Web applications"</span>,</div>
+      <div class="pl-8"><span class="text-secondary">"Telegram Bots"</span>,</div>
+      <div class="pl-8"><span class="text-secondary">"ML projects"</span></div>
+      <div class="pl-8"><span class="text-secondary">"AI agent development"</span></div>
+      
+      <div class="pl-4">],</div>
+       <div class="">};</div>
+      
+    </div>
+  </div>
+</div></div>
+</div>
+</div>
+</section>
+<!-- ABOUT & MINDSET SECTION -->
+<section class="py-24 max-w-7xl mx-auto px-4 md:px-8 border-b border-border-hairline" id="about"><div class="space-y-12">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+    <!-- Developer Profile Glassmorphic Card Column -->
+    <div class="lg:col-span-5">
+      <div class="group relative rounded-xl bg-surface-elevated/80 border border-border-hairline p-5 md:p-6 backdrop-blur-xl shadow-2xl transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_35px_rgba(6,182,212,0.35)] custom-glow-cyan overflow-hidden">
+        <!-- Cyan/Teal ambient subtle background flare -->
+        <div class="absolute -top-12 -right-12 w-40 h-40 bg-primary/10 rounded-full blur-3xl pointer-events-none group-hover:bg-primary/20 transition-all duration-500"></div>
+
+        
+ <div class="pt-1 flex flex-col sm:flex-row sm:items-center gap-4 font-code-inline text-code-inline text-xs text-text-secondary">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-base">verified</span>
+          <span class="">Clean Architecture</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-base">verified</span>
+          <span class="">Bots &amp; API-integration</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-tertiary text-base">verified</span>
+          <span class="">LLM Integration</span>
+        </div>
+      </div>
+        <!-- Quick Engineering Focus Footer within Profile Card -->
+        
+      </div>
+    </div>
+
+    <!-- Identity & Story Narrative Column -->
+    <div class="lg:col-span-7 space-y-5">
+      <div class="inline-flex items-center gap-2 font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-widest">
+        <span class="material-symbols-outlined text-base">person</span>
+        <span class="">ENGINEERING IDENTITY &amp; CORE PASSION</span>
+      </div>
+      <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-text-primary tracking-tight">
+        A full-stack web developer and Computer Science student at Jimma University.
+      </h2>
+      <p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+       I'm Yohanis Kefyalew, a Computer Science student and dedicated Full-Stack Developer passionate about building scalable, user-friendly, and impactful digital solutions.
+
+I'm experienced in frontend development using JavaScript and modern frameworks such as React and Angular, as well as backend development with Node.js, Next.js, Express.js, Flask, and Django. I'm also familiar with designing and integrating APIs, including REST APIs, WebSockets, and GraphQL.
+Beyond web development, I'm exploring the world of Machine Learning and AI, building projects such as a sign language interpreter using OpenCV, TensorFlow, and Scikit-learn. My other projects include a student union voting platform, a campus problem reporting and tracking system, and Telegram bots.</p>
+    
+     
+    </div>
+  </div>
+
+  <!-- Bento Grid: Core Tenets -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+    <div class="p-6 rounded-xl bg-surface-elevated/70 border border-border-hairline hover:border-primary/40 transition-all duration-200 group">
+      <div class="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-4 group-hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined">palette</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-2">Clean UI</h3>
+      <p class="font-body-sm text-body-sm text-text-secondary">
+       Designing intuitive, modern, and responsive interfaces that combine visual clarity with effortless navigation and a seamless user experience. </p>
+    </div>
+    <div class="p-6 rounded-xl bg-surface-elevated/70 border border-border-hairline hover:border-secondary/40 transition-all duration-200 group">
+      <div class="w-10 h-10 rounded-lg bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary mb-4 group-hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined">communication</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-2">Clear Communication</h3>
+      <p class="font-body-sm text-body-sm text-text-secondary">
+      Keeping clients informed, listening carefully to feedback, and communicating progress, challenges, and solutions throughout every stage of development.</p>
+    </div>
+    <div class="p-6 rounded-xl bg-surface-elevated/70 border border-border-hairline hover:border-tertiary/40 transition-all duration-200 group">
+      <div class="w-10 h-10 rounded-lg bg-tertiary/10 border border-tertiary/20 flex items-center justify-center text-tertiary mb-4 group-hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined">timelapse</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-2">On Time Delivery</h3>
+      <p class="font-body-sm text-body-sm text-text-secondary">
+        Planning effectively, prioritizing what matters, and delivering high-quality work on schedule while maintaining attention to detail.</p>
+    </div>
+    <div class="p-6 rounded-xl bg-surface-elevated/70 border border-border-hairline hover:border-status-warning/40 transition-all duration-200 group">
+      <div class="w-10 h-10 rounded-lg bg-status-warning/10 border border-status-warning/20 flex items-center justify-center text-status-warning mb-4 group-hover:scale-105 transition-transform">
+        <span class="material-symbols-outlined">architecture</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-2">Clean Architecture</h3>
+      <p class="font-body-sm text-body-sm text-text-secondary">
+        Building maintainable, modular, and scalable applications with clear separation of concerns, predictable data flow, and a solid foundation for future growth. </p>
+    </div>
+  </div>
+</div></section>
+<!-- TECH STACK & ENGINEERING TOOLBOX BENTO SECTION -->
+<section class="py-24 max-w-7xl mx-auto px-4 md:px-8 border-b border-border-hairline" id="stack">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="space-y-2">
+<div class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">build</span>
+<span class="">ENGINEERING TOOLBOX &amp; PROFICIENCIES</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-text-primary">
+            Curated modern stack.
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary max-w-2xl">
+            Technologies I leverage daily across frontend rendering, robust API backends, relational data models, and intelligent AI frameworks.
+          </p>
+</div>
+<div class="font-code-inline text-code-inline text-xs text-text-muted flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-success"></span>
+<span class="">Continuously expanded through university labs and production projects</span>
+</div>
+</div>
+<!-- Bento Grid for Toolbox Categories -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Frontend Card -->
+<div class="p-6 rounded-xl bg-surface-elevated/80 border border-border-hairline backdrop-blur-md flex flex-col justify-between hover:border-primary/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2.5">
+<span class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-lg">code</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary">Frontend</h3>
+</div>
+<span class="font-label-badge text-label-badge text-text-muted">CLIENT TIER</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-4">
+              Building reactive, accessible, and high-performance interfaces with modern JS frameworks and semantic DOM structures.
+            </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#A5B4FC] border border-[#6366F1]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/html5/E34F26" alt="" aria-hidden="true" loading="lazy">HTML5</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#A5B4FC] border border-[#6366F1]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" aria-hidden="true" loading="lazy">CSS3</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#A5B4FC] border border-[#6366F1]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" aria-hidden="true" loading="lazy">JavaScript (ES6+)</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#A5B4FC] border border-[#6366F1]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/react/61DAFB" alt="" aria-hidden="true" loading="lazy">React</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#A5B4FC] border border-[#6366F1]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="" aria-hidden="true" loading="lazy">Tailwind CSS</span>
+</div>
+</div>
+<!-- Backend Card -->
+<div class="p-6 rounded-xl bg-surface-elevated/80 border border-border-hairline backdrop-blur-md flex flex-col justify-between hover:border-secondary/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2.5">
+<span class="p-2 rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-lg">dns</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary">Backend</h3>
+</div>
+<span class="font-label-badge text-label-badge text-text-muted">SERVER ARCH</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-4">
+              Developing RESTful service architectures, auth security flows, transaction handling, and business logic pipelines.
+            </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#67E8F9] border border-[#06B6D4]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/nodedotjs/339933" alt="" aria-hidden="true" loading="lazy">Node.js</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#67E8F9] border border-[#06B6D4]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><span class="inline-flex items-center justify-center w-4 h-4 rounded-sm bg-white p-0.5"><img class="w-full h-full object-contain" src="https://cdn.simpleicons.org/express/000000" alt="" aria-hidden="true" loading="lazy"></span>Express</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#67E8F9] border border-[#06B6D4]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/python/3776AB" alt="" aria-hidden="true" loading="lazy">Python</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#67E8F9] border border-[#06B6D4]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><span class="inline-flex items-center justify-center w-4 h-4 rounded-sm bg-white p-0.5"><img class="w-full h-full object-contain" src="https://cdn.simpleicons.org/flask/000000" alt="" aria-hidden="true" loading="lazy"></span>Flask</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#67E8F9] border border-[#06B6D4]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><span class="inline-flex items-center justify-center w-4 h-4 rounded-sm bg-white p-0.5"><img class="w-full h-full object-contain" src="https://cdn.simpleicons.org/django/092E20" alt="" aria-hidden="true" loading="lazy"></span>Django</span>
+</div>
+</div>
+<!-- Database Card -->
+<div class="p-6 rounded-xl bg-surface-elevated/80 border border-border-hairline backdrop-blur-md flex flex-col justify-between hover:border-tertiary/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2.5">
+<span class="p-2 rounded-lg bg-tertiary/10 text-tertiary">
+<span class="material-symbols-outlined text-lg">database</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary">Databases</h3>
+</div>
+<span class="font-label-badge text-label-badge text-text-muted">DATA STORES</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-4">
+              Designing relational schemas, indexed queries, normalization paradigms, and document-store structures for speed and consistency.
+            </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#67E8F9] border border-[#06B6D4]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" aria-hidden="true" loading="lazy">PostgreSQL</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#67E8F9] border border-[#06B6D4]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/mongodb/47A248" alt="" aria-hidden="true" loading="lazy">MongoDB</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#67E8F9] border border-[#06B6D4]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/mysql/4479A1" alt="" aria-hidden="true" loading="lazy">MySQL</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#67E8F9] border border-[#06B6D4]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/sqlite/003B57" alt="" aria-hidden="true" loading="lazy">SQLite</span>
+</div>
+</div>
+<!-- AI & Intelligent Systems Card -->
+<div class="p-6 rounded-xl bg-surface-elevated/80 border border-border-hairline backdrop-blur-md flex flex-col justify-between hover:border-primary/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2.5">
+<span class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-lg">psychology</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary">AI &amp; Machine Learning</h3>
+</div>
+<span class="font-label-badge text-label-badge text-text-muted">INTELLIGENCE</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-4">
+              Training basic predictive models, implementing NLP pipelines, and integrating AI agent frameworks for intelligent workflows.
+            </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#6EE7B7] border border-[#10B981]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="" aria-hidden="true" loading="lazy">TensorFlow</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#6EE7B7] border border-[#10B981]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="" aria-hidden="true" loading="lazy">Scikit-learn</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#6EE7B7] border border-[#10B981]/30 font-label-badge text-label-badge">AI Agent Workflows</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#6EE7B7] border border-[#10B981]/30 font-label-badge text-label-badge">Model Inference</span>
+</div>
+</div>
+<!-- Tooling & Automation Card -->
+<div class="p-6 rounded-xl bg-surface-elevated/80 border border-border-hairline backdrop-blur-md flex flex-col justify-between hover:border-status-warning/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2.5">
+<span class="p-2 rounded-lg bg-status-warning/10 text-status-warning">
+<span class="material-symbols-outlined text-lg">terminal</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary">Tooling &amp; Bots</h3>
+</div>
+<span class="font-label-badge text-label-badge text-text-muted">AUTOMATION</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-4">
+              Streamlining developer loops via Git, automated Telegram chatbots, API debugging in Postman, and terminal scripting.
+            </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#A5B4FC] border border-[#6366F1]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/telegram/26A5E4" alt="" aria-hidden="true" loading="lazy">Telegram Bot API</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#A5B4FC] border border-[#6366F1]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/git/F05032" alt="" aria-hidden="true" loading="lazy">Git</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#A5B4FC] border border-[#6366F1]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><span class="inline-flex items-center justify-center w-4 h-4 rounded-sm bg-white p-0.5"><img class="w-full h-full object-contain" src="https://cdn.simpleicons.org/github/181717" alt="" aria-hidden="true" loading="lazy"></span>GitHub</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#A5B4FC] border border-[#6366F1]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="" aria-hidden="true" loading="lazy">VS Code</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#A5B4FC] border border-[#6366F1]/30 font-label-badge text-label-badge inline-flex items-center gap-2"><img class="w-4 h-4 object-contain" src="https://cdn.simpleicons.org/postman/FF6C37" alt="" aria-hidden="true" loading="lazy">Postman</span>
+</div>
+</div>
+<!-- Core Engineering Principles -->
+<div class="p-6 rounded-xl bg-surface-elevated/80 border border-border-hairline backdrop-blur-md flex flex-col justify-between hover:border-secondary/40 transition-all">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2.5">
+<span class="p-2 rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-lg">hub</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary">Engineering Foundations</h3>
+</div>
+<span class="font-label-badge text-label-badge text-text-muted">CS ESSENTIALS</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mb-4">
+              Data Structures &amp; Algorithms, relational query optimization, system design fundamentals, and clean RESTful API standards.
+            </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#6EE7B7] border border-[#10B981]/30 font-label-badge text-label-badge">Data Structures</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#6EE7B7] border border-[#10B981]/30 font-label-badge text-label-badge">System Design</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#6EE7B7] border border-[#10B981]/30 font-label-badge text-label-badge">Algorithms</span>
+<span class="px-2.5 py-1 rounded bg-surface-overlay text-[#6EE7B7] border border-[#10B981]/30 font-label-badge text-label-badge">RESTful Patterns</span>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED PROJECTS SHOWCASE SECTION -->
+<section class="py-24 max-w-7xl mx-auto px-4 md:px-8 border-b border-border-hairline" id="projects">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="space-y-2">
+<div class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">folder_open</span>
+<span class="">SHIPPED CODE &amp; ARCHITECTURAL WORKS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-text-primary">
+            Featured Projects.
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary max-w-2xl">
+            Selected public repositories from GitHub, linked directly to their source.
+          </p>
+</div>
+<a class="font-code-inline text-code-inline text-sm text-primary hover:underline flex items-center gap-1.5 w-fit" href="https://github.com/yohanisdev" rel="noopener noreferrer" target="_blank">
+<span class="">View all repositories on GitHub</span>
+<span class="material-symbols-outlined text-base">arrow_outward</span>
+</a>
+</div>
+<!-- Public projects from the GitHub profile -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+  <article class="rounded-xl bg-surface-elevated/70 border border-border-hairline overflow-hidden flex flex-col justify-between hover:border-primary/40 transition-all duration-300 group">
+    <div>
+      <div class="h-44 w-full bg-surface-base relative overflow-hidden border-b border-border-hairline flex items-center justify-center">
+        <span class="material-symbols-outlined text-6xl text-primary" aria-hidden="true">storefront</span>
+        <span class="absolute bottom-4 left-5 font-code-inline text-xs text-text-muted">INSA Summer Camp project</span>
+      </div>
+      <div class="p-6 space-y-4">
+        <div class="font-label-badge text-label-badge text-primary uppercase tracking-wider">E-commerce · JavaScript</div>
+        <h3 class="font-headline-md text-headline-md font-bold text-text-primary group-hover:text-primary transition-colors">Markato.com</h3>
+        <p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">An e-commerce project from the INSA Summer Camp. Its public repository describes it as a project assigned by the camp mentors.</p>
+      </div>
+    </div>
+    <div class="p-6 pt-0 border-t border-border-hairline/50 mt-4">
+      <a class="font-code-inline text-code-inline text-xs text-text-secondary hover:text-primary flex items-center gap-1 transition-colors" href="https://github.com/yohanisdev/markato.com" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-sm" aria-hidden="true">code</span><span>View repository</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="rounded-xl bg-surface-elevated/70 border border-border-hairline overflow-hidden flex flex-col justify-between hover:border-secondary/40 transition-all duration-300 group">
+    <div>
+      <div class="h-44 w-full bg-surface-base relative overflow-hidden border-b border-border-hairline flex items-center justify-center">
+        <span class="material-symbols-outlined text-6xl text-secondary" aria-hidden="true">apartment</span>
+        <span class="absolute bottom-4 left-5 font-code-inline text-xs text-text-muted">Public GitHub repository</span>
+      </div>
+      <div class="p-6 space-y-4">
+        <div class="font-label-badge text-label-badge text-secondary uppercase tracking-wider">Public repository</div>
+        <h3 class="font-headline-md text-headline-md font-bold text-text-primary group-hover:text-secondary transition-colors">DormTrack</h3>
+        <p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">A public project in Yohanis’s GitHub profile. Open the repository to see its source and current project details.</p>
+      </div>
+    </div>
+    <div class="p-6 pt-0 border-t border-border-hairline/50 mt-4">
+      <a class="font-code-inline text-code-inline text-xs text-text-secondary hover:text-secondary flex items-center gap-1 transition-colors" href="https://github.com/yohanisdev/dormTrack" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-sm" aria-hidden="true">code</span><span>View repository</span>
+      </a>
+    </div>
+  </article>
+
+  <article class="rounded-xl bg-surface-elevated/70 border border-border-hairline overflow-hidden flex flex-col justify-between hover:border-tertiary/40 transition-all duration-300 group">
+    <div>
+      <div class="h-44 w-full bg-surface-base relative overflow-hidden border-b border-border-hairline flex items-center justify-center">
+        <span class="material-symbols-outlined text-6xl text-tertiary" aria-hidden="true">campaign</span>
+        <span class="absolute bottom-4 left-5 font-code-inline text-xs text-text-muted">JavaScript repository</span>
+      </div>
+      <div class="p-6 space-y-4">
+        <div class="font-label-badge text-label-badge text-tertiary uppercase tracking-wider">Campus · JavaScript</div>
+        <h3 class="font-headline-md text-headline-md font-bold text-text-primary group-hover:text-tertiary transition-colors">CampusFix</h3>
+        <p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">A campus issue-reporting project for documenting problems and connecting reports with responses.</p>
+      </div>
+    </div>
+    <div class="p-6 pt-0 border-t border-border-hairline/50 mt-4">
+      <a class="font-code-inline text-code-inline text-xs text-text-secondary hover:text-tertiary flex items-center gap-1 transition-colors" href="https://github.com/yohanisdev/CampusFix" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-sm" aria-hidden="true">code</span><span>View repository</span>
+      </a>
+    </div>
+  </article>
+</div>
+
+<div class="mt-12 rounded-xl bg-surface-elevated/70 border border-border-hairline p-6 md:p-8">
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+    <div>
+      <div class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">GITHUB PROFILE</div>
+      <h3 class="font-headline-sm text-headline-sm font-bold text-text-primary mt-2">Yohanis Kefyalew · @yohanisdev</h3>
+      <p class="font-body-sm text-body-sm text-text-secondary mt-2">Full-stack web developer. Public profile snapshot; counts can change.</p>
+    </div>
+    <div class="flex gap-4">
+      <div class="p-4 rounded-lg bg-surface-base/70 border border-border-hairline min-w-28">
+        <div class="font-label-eyebrow text-label-eyebrow text-text-muted uppercase">Public repos</div>
+        <div class="font-headline-md text-headline-md text-primary font-bold mt-1">12</div>
+      </div>
+      <div class="p-4 rounded-lg bg-surface-base/70 border border-border-hairline min-w-28">
+        <div class="font-label-eyebrow text-label-eyebrow text-text-muted uppercase">Followers</div>
+        <div class="font-headline-md text-headline-md text-secondary font-bold mt-1">15</div>
+      </div>
+    </div>
+    <a class="px-5 py-3 rounded-lg bg-surface-overlay hover:bg-surface-bright border border-border-highlight text-text-primary font-semibold font-body-sm text-body-sm flex items-center gap-2 transition-all" href="https://github.com/yohanisdev" rel="noopener noreferrer" target="_blank">
+      <span>Open GitHub profile</span><span class="material-symbols-outlined text-base" aria-hidden="true">arrow_outward</span>
+    </a>
+  </div>
+  <p class="font-code-inline text-[10px] text-text-muted mt-4">Profile details checked October 12, 2026.</p>
+</div>
+</section>
+<!-- TRAINING, CERTIFICATIONS & ACADEMIC GROWTH SECTION -->
+<section class="py-24 max-w-7xl mx-auto px-4 md:px-8 border-b border-border-hairline" id="achievements">
+<div class="space-y-3 mb-12">
+<div class="font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">school</span>
+<span class="">COMPETENCIES &amp; ACCREDITATION</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-text-primary">
+          Learning beyond the classroom.
+        </h2>
+<p class="font-body-md text-body-md text-text-secondary max-w-2xl">
+          Technical training and certificates from INSA, Dilla University, and Ethio Coders.
         </p>
-        <div class="buttons">
-          <a class="btn primary" href="#projects">View My Work</a>
-          <a class="btn secondary" href="mailto:yohanskefyalew594@gmail.com">Let's Talk</a>
-        </div>
-        <div class="socials">
-          <a href="https://github.com/John-kefe630" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="tel:0925090990">0925 090 990</a>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="code-window">
-          <div class="window-bar"><i></i><i></i><i></i><span class="window-title">developer.js</span></div>
-          <pre><code><span class="kw">const</span> developer = {
-  name: <span class="str">"Yohanis"</span>,
-  role: <span class="str">"Full-Stack Dev"</span>,
-  year: <span class="num">3</span>,
-  learning: [
-    <span class="str">"ML"</span>,
-    <span class="str">"AI Agents"</span>
-  ],
-  mindset: <span class="str">"Build. Learn. Improve."</span>
-};</code></pre>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ABOUT ===== -->
-    <section id="about" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">About</p>
-        <h2>A developer who likes to <span>build.</span></h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I'm Yohanis, a Computer Science student at Jimma University and an aspiring
-            software engineer focused on full-stack development.
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Cert 1: INSA Summer Camp -->
+<div class="p-6 rounded-xl bg-surface-elevated/70 border border-border-hairline hover:border-primary/40 transition-all flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge px-2.5 py-1 rounded bg-primary/10 text-primary border border-primary/20">
+                TECHNICAL TRAINING
+              </span>
+<span class="font-code-inline text-code-inline text-xs text-text-muted">NATIONAL</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-1">INSA Summer Camp</h3>
+<p class="font-code-inline text-code-inline text-xs text-primary mb-3">Wolaita Sodo University</p>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                Participated in the INSA Summer Camp and completed technical training.
+              </p>
+</div>
+</div>
+<div class="pt-6 border-t border-border-hairline/60 flex items-center gap-2 text-text-muted text-xs font-code-inline">
+<span class="material-symbols-outlined text-status-success text-sm">verified_user</span>
+<span class="">Completed Technical Program</span>
+</div>
+</div>
+<!-- Cert 2: STEM Program -->
+<div class="p-6 rounded-xl bg-surface-elevated/70 border border-border-hairline hover:border-secondary/40 transition-all flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge px-2.5 py-1 rounded bg-secondary/10 text-secondary border border-secondary/20">
+                STEM PROGRAM
+              </span>
+<span class="font-code-inline text-code-inline text-xs text-text-muted">CERTIFICATE</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-1">STEM Program</h3>
+<p class="font-code-inline text-code-inline text-xs text-secondary mb-3">Dilla University</p>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                Participated in a STEM training program at Dilla University and earned a certificate.
+              </p>
+</div>
+</div>
+<div class="pt-6 border-t border-border-hairline/60 flex items-center gap-2 text-text-muted text-xs font-code-inline">
+<span class="material-symbols-outlined text-secondary text-sm">workspace_premium</span>
+<span class="">STEM certificate earned</span>
+</div>
+</div>
+<!-- Cert 3: Ethio Coders Initiative -->
+<div class="p-6 rounded-xl bg-surface-elevated/70 border border-border-hairline hover:border-tertiary/40 transition-all flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge px-2.5 py-1 rounded bg-tertiary/10 text-tertiary border border-tertiary/20">
+                TRIPLE CREDENTIAL
+              </span>
+<span class="font-code-inline text-code-inline text-xs text-text-muted">NATIONAL INITIATIVE</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-text-primary mb-1">Ethio Coders Initiative</h3>
+<p class="font-code-inline text-code-inline text-xs text-tertiary mb-3">3x Completed Specializations</p>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                Successfully completed and certified in three foundational national curricula: Programming Fundamentals, Artificial Intelligence, and Android Development.
+              </p>
+</div>
+</div>
+<div class="pt-6 border-t border-border-hairline/60 flex items-center gap-2 text-text-muted text-xs font-code-inline">
+<span class="material-symbols-outlined text-status-success text-sm">stars</span>
+<span class="">AI • Programming • Android</span>
+</div>
+</div>
+</div>
+</section>
+<!-- DIRECT CONTACT & COLLABORATION SECTION -->
+<section class="py-24 max-w-7xl mx-auto px-4 md:px-8" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Contact Meta & Direct Channels -->
+<div class="lg:col-span-5 space-y-6">
+<div class="inline-flex items-center gap-2 font-label-eyebrow text-label-eyebrow text-primary uppercase tracking-widest">
+<span class="material-symbols-outlined text-base">alternate_email</span>
+<span class="">COLLABORATE &amp; GET IN TOUCH</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-text-primary">
+            Let's build something useful together.
+          </h2>
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+            Have an open software internship, a production contract, or an intriguing idea in full-stack web and AI systems? Let's connect.
           </p>
-          <p>
-            I enjoy turning ideas into working applications. My projects include an
-            e-commerce website, a voting platform, and a campus problem-reporting platform.
-            I'm also expanding my skills in machine learning, AI agent development, and Telegram bots.
-          </p>
-        </div>
-        <div class="facts">
-          <div><strong>3rd</strong><span>Year CS Student</span></div>
-          <div><strong>3+</strong><span>Core Projects</span></div>
-          <div><strong>3</strong><span>Ethio Coders Courses</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== TOOLBOX ===== -->
-    <section id="toolbox" class="section alt">
-      <div class="section-heading">
-        <p class="eyebrow">Skills</p>
-        <h2>My <span>toolbox.</span></h2>
-        <p class="section-sub">Tech Stack I use For Developing And Building Web.</p>
-      </div>
-
-      <div class="toolbox-grid">
-        <article class="tool-category">
-          <h3>Frontend</h3>
-          <div class="icon-row">
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/html5" alt="HTML5" loading="lazy"><span>HTML5</span></div><div class="tool-icon">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" loading="lazy">
-  <span>CSS3</span>
+<!-- Direct Interactive Cards -->
+<div class="space-y-3 pt-2">
+<!-- Email Item with Copy Trigger -->
+<div class="p-4 rounded-xl bg-surface-elevated/70 border border-border-hairline flex items-center justify-between group hover:border-primary/40 transition-all">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">mail</span>
+</span>
+<div>
+<div class="font-label-eyebrow text-label-eyebrow text-text-muted">DIRECT EMAIL</div>
+<div class="font-code-inline text-code-inline text-text-primary font-medium text-sm" id="email-text">yohanskefyalew594@gmail.com</div>
 </div>
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" loading="lazy"><span>JavaScript</span></div>
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/react" alt="React" loading="lazy"><span>React</span></div>
-          </div>
-        </article>
-
-        <article class="tool-category">
-          <h3>Backend</h3>
-          <div class="icon-row">
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js" loading="lazy"><span>Node.js</span></div>
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/express" alt="Express.js" loading="lazy"><span>Express</span></div>
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/python" alt="Python" loading="lazy"><span>Python</span></div>
-            <div class="tool-icon">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" loading="lazy">
-  <span>Flask</span>
 </div>
-
-<!-- Django icon -->
-<div class="tool-icon">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" loading="lazy">
-  <span>Django</span>
+<button class="p-2 rounded-lg bg-surface-overlay text-text-secondary hover:text-primary hover:bg-surface-bright transition-colors" onclick="navigator.clipboard.writeText('yohanskefyalew594@gmail.com'); alert('Copied yohanskefyalew594@gmail.com to clipboard!');" title="Copy Email">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
 </div>
-          </div>
-        </article>
-
-        <article class="tool-category">
-          <h3>Database</h3>
-          <div class="icon-row">
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/mysql" alt="MySQL" loading="lazy"><span>MySQL</span></div>
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/mongodb" alt="MongoDB" loading="lazy"><span>MongoDB</span></div>
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/sqlite" alt="SQLite" loading="lazy"><span>SQLite</span></div>
-            <div class="tool-icon">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" loading="lazy">
-  <span>PostgreSQL</span>
+<!-- Phone Direct -->
+<div class="p-4 rounded-xl bg-surface-elevated/70 border border-border-hairline flex items-center justify-between group hover:border-secondary/40 transition-all">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">call</span>
+</span>
+<div>
+<div class="font-label-eyebrow text-label-eyebrow text-text-muted">PHONE / TELEGRAM</div>
+<a class="font-code-inline text-code-inline text-text-primary font-medium text-sm hover:underline" href="tel:+251925090990">+251 925 090 990 / 0925960071</a>
 </div>
-          </div>
-        </article>
-
-        <article class="tool-category">
-          <h3>Tools</h3>
-          <div class="icon-row">
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/github" alt="GitHub" loading="lazy"><span>GitHub</span></div><div class="tool-icon">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" loading="lazy">
-  <span>VS Code</span>
 </div>
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/postman" alt="Postman" loading="lazy"><span>Postman</span></div>
-          </div>
-        </article>
+<a class="p-2 rounded-lg bg-surface-overlay text-text-secondary hover:text-secondary hover:bg-surface-bright transition-colors" href="tel:+251925090990">
+<span class="material-symbols-outlined text-sm">phone_forwarded</span>
+</a>
+</div>
+<!-- LinkedIn Profile -->
+<div class="p-4 rounded-xl bg-surface-elevated/70 border border-border-hairline flex items-center justify-between group hover:border-tertiary/40 transition-all">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">public</span>
+</span>
+<div>
+<div class="font-label-eyebrow text-label-eyebrow text-text-muted">LINKEDIN PROFESSIONAL</div>
+<div class="font-code-inline text-code-inline text-text-primary font-medium text-sm">Yohanis Kefyalew</div>
+</div>
+</div>
+<a class="p-2 rounded-lg bg-surface-overlay text-text-secondary hover:text-tertiary hover:bg-surface-bright transition-colors" href="https://www.linkedin.com/in/yohanis-kefyalew-37269b397?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Contact Form Box -->
+<div class="lg:col-span-7">
+<div class="p-8 rounded-xl bg-surface-elevated/80 border border-border-hairline shadow-2xl backdrop-blur-xl">
+<h3 class="font-headline-sm text-headline-sm font-bold text-text-primary mb-2">Send a Message</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-6">Inquiries regarding full-stack software, internships, or technology partnerships.</p>
+<form class="space-y-4" action="mailto:yohanskefyalew594@gmail.com" method="post" enctype="text/plain">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label for="contact-name" class="font-label-badge text-label-badge text-text-secondary uppercase">Your Name</label>
+<input class="w-full rounded-lg bg-surface-base border border-border-hairline px-4 py-2.5 text-text-primary placeholder:text-text-muted focus:border-primary focus:ring-1 focus:ring-primary font-body-sm text-body-sm outline-none transition-all" id="contact-name" name="name" placeholder="Your name" required type="text">
+</div>
+<div class="space-y-1.5">
+<label for="contact-email" class="font-label-badge text-label-badge text-text-secondary uppercase">Email Address</label>
+<input class="w-full rounded-lg bg-surface-base border border-border-hairline px-4 py-2.5 text-text-primary placeholder:text-text-muted focus:border-primary focus:ring-1 focus:ring-primary font-body-sm text-body-sm outline-none transition-all" id="contact-email" name="email" placeholder="you@example.com" required type="email">
+</div>
+</div>
+<div class="space-y-1.5">
+<label for="contact-domain" class="font-label-badge text-label-badge text-text-secondary uppercase">Project Domain</label>
+<select id="contact-domain" name="project" class="w-full rounded-lg bg-surface-base border border-border-hairline px-4 py-2.5 text-text-primary focus:border-primary focus:ring-1 focus:ring-primary font-body-sm text-body-sm outline-none transition-all">
+<option class="bg-surface-elevated">Full-Stack Web Development</option>
+<option class="bg-surface-elevated">AI Agent &amp; ML Automation</option>
+<option class="bg-surface-elevated">Internship / Junior Engineering Opportunity</option>
+<option class="bg-surface-elevated">Telegram Bot / Scripting Integration</option>
+<option class="bg-surface-elevated">Civic Tech Platform Development</option>
+</select>
+</div>
+<div class="space-y-1.5">
+<label for="contact-message" class="font-label-badge text-label-badge text-text-secondary uppercase">Message Context</label>
+<textarea id="contact-message" name="message" class="w-full rounded-lg bg-surface-base border border-border-hairline px-4 py-2.5 text-text-primary placeholder:text-text-muted focus:border-primary focus:ring-1 focus:ring-primary font-body-sm text-body-sm outline-none transition-all" placeholder="Describe your goal, timeline, or engineering inquiry..." required="" rows="4"></textarea>
+</div>
+<button class="w-full py-3.5 px-6 rounded-lg bg-primary text-on-primary font-semibold font-body-sm text-body-sm hover:shadow-[0_0_24px_rgba(6,182,212,0.4)] transition-all duration-200 active:scale-98 flex items-center justify-center gap-2" type="submit">
+<span class="">Dispatch Inquiry</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Shared Component Anchor: Footer (technical_footer) -->
+<footer class="bg-surface-base dark:bg-surface-base border-t border-border-hairline dark:border-border-hairline flat no shadows">
+<div class="w-full max-w-7xl mx-auto px-4 md:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<!-- Brand & Copyright -->
+<div class="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+<span class="font-code-inline text-code-inline font-semibold text-text-primary dark:text-text-primary">
+          yk.dev
+        </span>
+<span class="hidden sm:inline text-text-muted">|</span>
+<span class="text-text-muted dark:text-text-muted font-body-sm text-body-sm">
+          © <span id="year"></span> Yohanis Kefyalew. Built with precision and clean architecture.
+        </span>
+</div>
+<!-- Footer Quick Links from Shared Components JSON + System Status -->
+<div class="flex items-center gap-6">
+<a class="text-text-muted dark:text-text-muted font-body-sm text-body-sm hover:text-primary dark:hover:text-primary transition-colors duration-150" href="#hero">Terminal</a>
+<a class="text-text-muted dark:text-text-muted font-body-sm text-body-sm hover:text-primary dark:hover:text-primary transition-colors duration-150" href="https://github.com/yohanisdev" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="text-text-muted dark:text-text-muted font-body-sm text-body-sm hover:text-primary dark:hover:text-primary transition-colors duration-150" href="https://www.linkedin.com/in/yohanis-kefyalew-37269b397?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="text-text-muted dark:text-text-muted font-body-sm text-body-sm hover:text-primary dark:hover:text-primary transition-colors duration-150" href="mailto:yohanskefyalew594@gmail.com">Email</a>
+<a class="text-text-muted dark:text-text-muted font-body-sm text-body-sm hover:text-primary dark:hover:text-primary transition-colors duration-150" href="https://github.com/yohanisdev" rel="noopener noreferrer" target="_blank">Source</a>
+<button class="w-8 h-8 rounded-lg bg-surface-elevated border border-border-hairline flex items-center justify-center text-text-secondary hover:text-primary hover:border-primary/40 transition-colors" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" title="Return to top">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+</button>
+</div>
+</div>
+</footer>
 
-        <article class="tool-category">
-          <h3>AI &amp; ML</h3>
-          <div class="icon-row">
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/tensorflow" alt="TensorFlow" loading="lazy"><span>TensorFlow</span></div>
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/scikitlearn" alt="Scikit-learn" loading="lazy"><span>Scikit-learn</span></div>
-          </div>
-        </article>
 
-        <article class="tool-category">
-          <h3>Automation</h3>
-          <div class="icon-row">
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/telegram" alt="Telegram Bots" loading="lazy"><span>Telegram</span></div>
-            <div class="tool-icon"><img src="https://cdn.simpleicons.org/python" alt="Python" loading="lazy"><span>Python</span></div>
-          </div>
-        </article>
-      </div>
-
-      <article class="engineering-card">
-        <h3>Engineering</h3>
-        <p>Problem solving, system design, and full-stack development — the thinking that ties every tool above together.</p>
-      </article>
-    </section>
-
-    <!-- ===== PROJECTS ===== -->
-    <section id="projects" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Projects</p>
-        <h2>Few Things From I've <span>built.</span></h2>
-      </div>
-      <div class="projects-grid">
-        <article class="project-card">
-          <p class="tag">Full-Stack · E-Commerce</p>
-          <h3>E-Commerce Platform</h3>
-          <p>A full-stack shopping platform focused on product management and a smooth online shopping experience.</p>
-          <div class="tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Backend</span></div>
-        </article>
-        <article class="project-card">
-          <p class="tag">Full-Stack · Civic Tech</p>
-          <h3>Voting Platform</h3>
-          <p>A digital voting platform designed to make the voting process structured, convenient, and accessible.</p>
-          <div class="tech"><span>JavaScript</span><span>Backend</span><span>Database</span></div>
-        </article>
-        <article class="project-card">
-          <p class="tag">Full-Stack · Campus</p>
-          <h3>Campus Problem Reporting</h3>
-          <p>A platform for students to report campus problems and for responsible parties to manage and respond to reports.</p>
-          <div class="tech"><span>Node.js</span><span>Express</span><span>Database</span></div>
-        </article>
-      </div>
-      <div class="github-cta">
-        <p>More projects and code are available on my GitHub.</p>
-        <a class="btn secondary" href="https://github.com/John-kefe630" target="_blank" rel="noopener">Visit GitHub ↗</a>
-      </div>
-    </section>
-
-    <!-- ===== TRAINING ===== -->
-    <section id="training" class="section alt">
-      <div class="section-heading">
-        <p class="eyebrow">Training</p>
-        <h2>Learning beyond the <span>classroom.</span></h2>
-      </div>
-      <div class="timeline">
-        <article>
-          <div class="timeline-dot"></div>
-          <div><p class="date">INSA Summer Camp</p><h3>Wolaita Sodo University</h3><p>Participated in the INSA Summer Camp and completed technical training.</p></div>
-        </article>
-        <article>
-          <div class="timeline-dot"></div>
-          <div><p class="date">STEM Program</p><h3>Dilla University</h3><p>Participated in a STEM-(Science Technlogy Engineering and Mathematics)focused training program and earned a certificate.</p></div>
-        </article>
-        <article>
-          <div class="timeline-dot"></div>
-          <div><p class="date">Ethio Coders</p><h3>Three Completed Courses</h3><p>Earned certificates in Programming Fundamentals, Artificial Intelligence, and Android Development.</p></div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT ===== -->
-    <section id="contact" class="section contact">
-      <p class="eyebrow">Contact</p>
-      <h2>Let's build something <span>useful.</span></h2>
-      <p>Have a project, opportunity, or idea? I'd be happy to connect.</p>
-      <a class="email-link" href="mailto:yohanskefyalew594@gmail.com">yohanskefyalew594@gmail.com</a>
-      <div class="contact-links">
-        <a href="https://github.com/John-kefe630" target="_blank" rel="noopener">GitHub</a>
-        <a href="tel:0925960071">Phone</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© <span id="year"></span> Yohanis Kefyalew. Alright Reserved</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<script src="script.js"></script>
+</body></html>
