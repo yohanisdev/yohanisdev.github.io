@@ -15,3 +15,56 @@
         linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     }
+
+    /* Learning beyond class: certificate timeline */
+    .achievement-timeline { position: relative; }
+    .achievement-list { display: flex; flex-direction: column; gap: 2.25rem; }
+    .achievement-rail { position: absolute; z-index: 0; left: 0; top: 0; bottom: 0; width: 3px; border-radius: 4px; background: rgba(148,163,184,.18); }
+    .achievement-rail-fill { display: block; width: 100%; height: 100%; border-radius: inherit; background: linear-gradient(180deg,#22d3ee,#818cf8,#34d399); transform: scaleY(0); transform-origin: top; transition: transform .12s linear; box-shadow: 0 0 14px rgba(34,211,238,.55); }
+    .achievement-row { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1fr) 78px minmax(260px,.85fr); align-items: center; gap: 0; padding-left: 2rem; opacity: .72; transform: translateY(20px); transition: opacity .55s ease, transform .55s ease; }
+    .achievement-row::before { content: ""; position: absolute; left: -5px; top: 50%; width: 13px; height: 13px; border-radius: 50%; background: #64748b; border: 3px solid #0f172a; transform: translateY(-50%); transition: background .3s, box-shadow .3s; }
+    .achievement-row.is-visible { opacity: 1; transform: translateY(0); }
+    .achievement-row.is-visible::before { background: #22d3ee; box-shadow: 0 0 0 5px rgba(34,211,238,.13),0 0 18px #22d3ee; }
+    .achievement-card { min-height: 240px; position: relative; z-index: 1; }
+    .certificate-connection { height: 2px; position: relative; background: linear-gradient(90deg,rgba(34,211,238,.25),rgba(34,211,238,.8),rgba(129,140,248,.4)); }
+    .certificate-connection::before,.certificate-connection::after { content:""; position:absolute; top:50%; width:7px; height:7px; border:2px solid #22d3ee; background:#0f172a; border-radius:50%; transform:translateY(-50%); }
+    .certificate-connection::before { left:0; }.certificate-connection::after { right:0; }
+    .electron { position:absolute; left:0; top:50%; width:7px; height:7px; border-radius:50%; background:#a5f3fc; box-shadow:0 0 10px 3px rgba(34,211,238,.8); transform:translate(-50%,-50%); opacity:0; }
+    .achievement-row.is-visible .electron { opacity:1; animation: electron-flow 1.8s ease-in-out infinite; }
+    @keyframes electron-flow { 0% { left:0; opacity:0; } 12% { opacity:1; } 85% { opacity:1; } 100% { left:100%; opacity:0; } }
+    .certificate-frame { position:relative; min-width:0; min-height:190px; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; border:1px solid rgba(148,163,184,.25); border-radius:14px; background:linear-gradient(145deg,rgba(30,41,59,.9),rgba(15,23,42,.95)); box-shadow:0 18px 45px rgba(0,0,0,.18); }
+    .certificate-frame img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; padding:12px; background:#f8fafc; }
+    .certificate-frame figcaption { position:relative; z-index:1; padding:8px 12px; color:#e2e8f0; font-size:.72rem; background:rgba(15,23,42,.88); font-family:ui-monospace,monospace; }
+    .certificate-placeholder { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:8px; padding:16px; text-align:center; color:#94a3b8; font-size:.7rem; font-family:ui-monospace,monospace; }
+    .certificate-placeholder::before { content:"photo"; display:grid; place-items:center; width:34px; height:34px; border:1px dashed #64748b; border-radius:50%; color:#67e8f9; font-size:.6rem; }
+    .certificate-placeholder code { color:#67e8f9; overflow-wrap:anywhere; }
+    .certificate-frame.has-photo .certificate-placeholder { display:none; }
+    .certificate-frame.has-photo figcaption { margin-top:auto; }
+    .certificate-stack { position:relative; display:grid; gap:10px; }
+    .certificate-stack::before { content:""; position:absolute; left:0; top:12%; bottom:12%; width:2px; background:linear-gradient(180deg,rgba(34,211,238,.75),rgba(129,140,248,.55)); }
+    .certificate-branch { display:grid; grid-template-columns:18px minmax(0,1fr); align-items:center; min-width:0; position:relative; }
+    .branch-wire { height:2px; position:relative; display:block; background:linear-gradient(90deg,rgba(34,211,238,.75),rgba(129,140,248,.35)); }
+    .branch-wire::before { content:""; position:absolute; left:0; top:50%; width:7px; height:7px; border:2px solid #22d3ee; background:#0f172a; border-radius:50%; transform:translate(-50%,-50%); }
+    .branch-wire .electron { opacity:0; }
+    .achievement-row.is-visible .branch-wire .electron { opacity:1; animation:electron-flow 1.8s ease-in-out infinite; }
+    .certificate-branch:nth-child(2) .electron { animation-delay:.35s !important; }
+    .certificate-branch:nth-child(3) .electron { animation-delay:.7s !important; }
+    @media(max-width:760px) {
+      .achievement-list { gap:1.5rem; }
+      .achievement-row { grid-template-columns:minmax(0,1fr); gap:0; padding-left:1.5rem; }
+      .achievement-rail { left:0; }
+      .achievement-row::before { left:-5px; top:1.2rem; }
+      .achievement-card { min-height:0; }
+      .certificate-connection { height:38px; width:2px; justify-self:start; margin-left:1.25rem; background:linear-gradient(180deg,rgba(34,211,238,.25),rgba(34,211,238,.8),rgba(129,140,248,.4)); }
+      .certificate-connection::before { top:0; left:50%; }.certificate-connection::after { top:auto; bottom:0; left:50%; }
+      .electron { left:50%; top:0; transform:translate(-50%,-50%); }
+      .achievement-row.is-visible .electron { animation-name:electron-flow-mobile; }
+      @keyframes electron-flow-mobile { 0% { top:0; opacity:0; } 12% { opacity:1; } 85% { opacity:1; } 100% { top:100%; opacity:0; } }
+      .certificate-frame { min-height:210px; }
+      .certificate-stack { padding-top:0; }
+      .certificate-stack::before { left:0; top:0; bottom:12%; height:auto; width:2px; }
+      .certificate-branch { grid-template-columns:24px minmax(0,1fr); }
+      .branch-wire { height:2px; }
+      .achievement-row.is-visible .branch-wire .electron { animation-name:electron-flow !important; }
+    }
+    @media(prefers-reduced-motion:reduce) { .achievement-row,.achievement-rail-fill { transition:none; }.achievement-row.is-visible .electron { animation:none; opacity:1; left:50%; } }

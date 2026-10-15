@@ -1,3 +1,56 @@
+// Certificate photos and the scroll-driven timeline run independently of WebGL.
+(() => {
+  const timeline = document.querySelector('[data-achievement-timeline]');
+  if (!timeline) return;
+  const rows = [...timeline.querySelectorAll('[data-achievement]')];
+  const fill = timeline.querySelector('.achievement-rail-fill');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  timeline.querySelectorAll('.certificate-frame').forEach((frame) => {
+    const photo = frame.querySelector('img');
+    const updatePhotoState = () => frame.classList.toggle('has-photo', photo.complete && photo.naturalWidth > 0);
+    photo.addEventListener('load', updatePhotoState);
+    photo.addEventListener('error', updatePhotoState);
+    updatePhotoState();
+  });
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    rows.forEach((row) => observer.observe(row));
+  } else {
+    rows.forEach((row) => row.classList.add('is-visible'));
+  }
+
+  if (!fill || reducedMotion) {
+    if (fill) fill.style.transform = 'scaleY(1)';
+    return;
+  }
+  let ticking = false;
+  const updateProgress = () => {
+    const rect = timeline.getBoundingClientRect();
+    const travel = rect.height + window.innerHeight * 0.55;
+    const progress = Math.max(0, Math.min(1, (window.innerHeight * 0.72 - rect.top) / travel));
+    fill.style.transform = `scaleY(${progress})`;
+    ticking = false;
+  };
+  const requestProgressUpdate = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateProgress);
+      ticking = true;
+    }
+  };
+  window.addEventListener('scroll', requestProgressUpdate, { passive: true });
+  window.addEventListener('resize', requestProgressUpdate);
+  updateProgress();
+})();
+
 (() => {
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
